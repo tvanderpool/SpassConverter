@@ -108,3 +108,12 @@ MIT — see [LICENSE](LICENSE).
 ---
 
 <sub>Keywords: samsung pass export · spass to csv · convert samsung pass to google password manager · import samsung pass to chrome · open spass file · samsung pass migration · samsung pass android · password export android · spass file format · samsung to bitwarden · samsung to 1password</sub>
+
+### CI releases (GitHub Actions)
+
+`.github/workflows/release.yml` builds the APK and attaches it to a GitHub Release.
+
+- **Tag:** `git tag v0.1.0 && git push origin v0.1.0`
+- **Manual:** Actions → "Build and Release APK" → Run workflow, enter a tag (e.g. `v0.1.0`).
+
+The APK appears under the repository's **Releases** page. If the repo secrets `RELEASE_KEYSTORE_BASE64`, `RELEASE_STORE_PASSWORD`, `RELEASE_KEY_ALIAS` and `RELEASE_KEY_PASSWORD` are set, a signed release APK is built; otherwise a debug-signed (installable) APK is published.
