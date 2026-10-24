@@ -113,7 +113,7 @@ MIT — see [LICENSE](LICENSE).
 
 `.github/workflows/release.yml` builds the APK and attaches it to a GitHub Release.
 
-- **Tag:** `git tag v0.1.0 && git push origin v0.1.0`
-- **Manual:** Actions → "Build and Release APK" → Run workflow, enter a tag (e.g. `v0.1.0`).
+- **Tag:** `git tag v1.0.1 && git push origin v1.0.1`
+- **Manual:** Actions → "Build and Release APK" → Run workflow, enter a tag (e.g. `v1.0.1`).
 
 The APK appears under the repository's **Releases** page. If the repo secrets `RELEASE_KEYSTORE_BASE64`, `RELEASE_STORE_PASSWORD`, `RELEASE_KEY_ALIAS` and `RELEASE_KEY_PASSWORD` are set, a signed release APK is built; otherwise a debug-signed (installable) APK is published.
