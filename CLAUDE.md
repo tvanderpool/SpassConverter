@@ -76,3 +76,7 @@ Suggested note format:
 - [Claude] Pushed; Pages live at https://stanley-projects.github.io/SpassConverter/ (HTTP 200 on first poll).
 - [Claude] IndexNow submitted 4 URLs to api.indexnow.org — HTTP 202 Accepted.
 - [Claude] Social preview PNG rendered via headless Edge → C:\Users\HP\Downloads\SpassConverter-social-preview.png (161 KB).
+
+### 2026-10-24
+- [Copilot] Release workflow failed before publishing: `gradlew` was committed as 100644, so `./gradlew` exited 126 (Permission denied) on Actions. Marked the wrapper executable (`100755`). Could not push `.github/workflows/release.yml` (GitHub App lacks `workflows` permission).
+- [Copilot] Second CI run got past `gradlew` then failed because `gradle.properties` set `org.gradle.java.home` to a Windows Android Studio JBR path. Removed that machine-specific property so Actions uses `JAVA_HOME` from setup-java.
